@@ -1,0 +1,21 @@
+{
+    "name": "homelan/acorn-disk",
+    "description": "Provides class for reading disk images for 8-bit Acorn machines (dfs/adfs)",
+    "keywords": ["acorn", "dfs", "adfs", "adl", "ssd" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John Brown",
+            "email": "packaging@home-lan.co.uk"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "HomeLan\\Retro\\Acorn\\Disk\\": "src/"
+        }
+    }
+}
