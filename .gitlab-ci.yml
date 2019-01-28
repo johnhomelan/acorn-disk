@@ -14,5 +14,5 @@ test-composer:
 deploy-satis:
   stage: deploy
   script:
-    - /home/publisher/upload
+    - /home/publisher/publish
     
