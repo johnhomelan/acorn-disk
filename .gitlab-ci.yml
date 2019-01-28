@@ -1,3 +1,5 @@
+---
+
 image: registry.home-lan.co.uk/satis-deploy:latest
 
 stages:
