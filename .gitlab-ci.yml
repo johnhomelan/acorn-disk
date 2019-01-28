@@ -1,0 +1,16 @@
+image: registry.home-lan.co.uk/satis-deploy:latest
+
+stages:
+  - test
+  - deploy
+  
+test-composer:
+  stage: test
+  script:
+    - composer validate
+
+deploy-satis
+  stage: deploy
+  script:
+    - /home/publisher/upload
+    
