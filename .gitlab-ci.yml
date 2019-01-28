@@ -11,7 +11,7 @@ test-composer:
   script:
     - composer validate
 
-deploy-satis
+deploy-satis:
   stage: deploy
   script:
     - /home/publisher/upload
