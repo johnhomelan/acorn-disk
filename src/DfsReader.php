@@ -5,6 +5,8 @@
 */
 namespace HomeLan\Retro\Acorn\Disk;
 
+use Exception;
+
 class DfsReader {
 
 	const SECTOR_SIZE = 256;

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Reads adfs disk images 
+ *
+*/
+
 namespace HomeLan\Retro\Acorn\Disk;
 
 class AdfsReader {
