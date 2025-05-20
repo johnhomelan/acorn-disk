@@ -30,28 +30,33 @@ DfsReader Usage
 
 Creating a DfsReader Object to directly open a file on disk
 
+```
 $oDfs = new \HomeLan\Retro\Acorn\Disk\DfsReader('disk_image.ssd');
-
+```
 
 Creating a DfsReader Object to read from a disk image held in a binary string
 
+```
 $sDiskImage = file_get_contents('disk_image.ssd');
 
 $oDfs = new  \HomeLan\Retro\Acorn\Disk\DfsReader(null,$sDiskImage);
-
+```
 
 Once the DfsReader object exists a few simple methods can be used to read data from it.
 
+```
 $oDfs->getTitle()
+```
 
 Reads the title of the disk
-
+```
 $aCatalogue = $oDfs->getCatalogue();
+```
 
 Gets the catalogue of what is on the disk *CAT
 
 e.g. 
-
+```
 $aCatalogue = $oDfs->getCatalogue();
 foreach($aCatalogue as $sDirectoy=>$aDir)
 {
@@ -64,66 +69,78 @@ foreach($aCatalogue as $sDirectoy=>$aDir)
 
 
 $oDfs->getFile('$.!BOOT');
+```
 
 The the contents of a give file 
 
 e.g.
-
+```
 $sFileContents = $oDfs->getFile('$.!BOOT');
 
 
 $oDfs->getStat('$.!BOOT');
+```
 
 Stats a file 
 
-
+```
 $oDfs->isFile('$.!BOOT');
+```
 
 Test if a given path is a file or not
 
 e.g.
-
+```
 $bFile = $oDfs->isFile('$.!BOOT');
 if($bFile){
 	echo "!BOOT is file.\n" 
 }
 
 $oDfs->isDir('A');
+```
 
 Test if a given path is a file or not
-
+```
 $bDir = $oDfs->isDir('D');
 if($bDir){
 	echo "D is a dir.\n" 
 }
+```
 
 AdfsReader Usage
 ---------------
 
 Creating a AdfsReader Object to directly open a file on disk
 
+```
 $oDfs = new \HomeLan\Retro\Acorn\Disk\AdfsReader('disk_image.adl');
-
+```
 
 Creating a AdfsReader Object to read from a disk image held in a binary string
 
+```
 $sDiskImage = file_get_contents('disk_image.adl');
 
 $oDfs = new  \HomeLan\Retro\Acorn\Disk\AdfsReader(null,$sDiskImage);
-
+```
 
 Once the AdfsReader object exists a few simple methods can be used to read data from it.
 
+```
 $oAdfs->getTitle()
+```
 
 Reads the title of the disk
 
+```
 $aCatalogue = $oAdfs->getCatalogue();
+```
 
 Gets the catalogue of what is on the disk *CAT
 
 e.g. 
 
+```
 $aCatalogue = $oAdfs->getCatalogue();
 foreach($aCatalogue as $sDirectoy=>$aDir)
 {
@@ -136,37 +153,42 @@ foreach($aCatalogue as $sDirectoy=>$aDir)
 
 
 $oAdfs->getFile('$.!BOOT');
-
+```
 The the contents of a give file 
 
 e.g.
 
+```
 $sFileContents = $oAdfs->getFile('$.!BOOT');
 
 
 $oAdfs->getStat('$.!BOOT');
+```
 
 Stats a file 
 
-
+```
 $oAdfs->isFile('$.!BOOT');
+```
 
 Test if a given path is a file or not
 
 e.g.
-
+```
 $bFile = $oAdfs->isFile('$.!BOOT');
 if($bFile){
 	echo "!BOOT is file.\n" 
 }
 
 $oDfs->isDir('A');
+```
 
 Test if a given path is a file or not
 
+```
 $bDir = $oAdfs->isDir('D');
 if($bDir){
 	echo "D is a dir.\n" 
 }
-
+```
 
