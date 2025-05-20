@@ -25,6 +25,8 @@ The DfsReader class can working to two ways, in can directly read bits of the di
 
 The AdfsReader class, allows files and metadata to be read from a ADFS floppy disk images stored in the .adl format.  ADFS filing systems are like modern filing systems in that there is a hierarchical directory structure, with '$' being the root of the fs.  There are limits on the number of files per dir in ADFS 
 
+The AdfsReaderHD class, does the same as the AdfsReader class, only is read hardisk images stored in the scsi.dat format used by Beebem.
+
 DfsReader Usage
 ---------------
 
@@ -191,4 +193,12 @@ if($bDir){
 	echo "D is a dir.\n" 
 }
 ```
+
+AdfsReaderHD Usage
+------------------
+
+This operates exactly the same as the AdfsReader class only the constuctor is different, as it does not support reading the disk image from a binary string.  
+As that is a some what negative feature with the significantly larger disk image sizes involved.
+
+$oDfs = new \HomeLan\Retro\Acorn\Disk\AdfsReaderHD('scsi0.dat');
 

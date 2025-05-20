@@ -4,7 +4,7 @@
  *
 */
 
-namespace \HomeLan\Retro\Acorn\Disk;
+namespace HomeLan\Retro\Acorn\Disk;
 
 class AdfsReader {
 

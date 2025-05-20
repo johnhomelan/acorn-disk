@@ -3,7 +3,9 @@
  * Read a dfs disk image
  *
 */
-namespace \HomeLan\Retro\Acorn\Disk;
+namespace HomeLan\Retro\Acorn\Disk;
+
+use Exception;
 
 class DfsReader {
 
